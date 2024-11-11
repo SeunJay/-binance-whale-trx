@@ -92,7 +92,7 @@ app.use(function (err, req, res, next) {
 
 scheduleTransactionJob();
 
-const PORT = process.env.PORT || 6001;
+const PORT = process.env.PORT || 4000;
 
 server.listen(PORT, function () {
   console.log(`Server running on PORT ${PORT}`);
