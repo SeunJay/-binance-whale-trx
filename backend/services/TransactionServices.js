@@ -1,8 +1,7 @@
 const axios = require("axios");
-// require("dotenv").config();
+require("dotenv").config();
 
 const bitQueryUrl = require("../config/key").bitQueryURL;
-const bitQueryApiKey = require("../config/key").bitQueryApiKey;
 
 exports.fetchTransactions = async () => {
   const query = `
@@ -47,7 +46,7 @@ exports.fetchTransactions = async () => {
     const response = await axios.post(
       bitQueryUrl,
       { query },
-      { headers: { "X-API-KEY": bitQueryApiKey } }
+      { headers: { "X-API-KEY": process.env.BITQUERY_API_KEY } }
     );
 
     return response.data.data.ethereum.transactions;
