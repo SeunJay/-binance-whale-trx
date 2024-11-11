@@ -1,5 +1,5 @@
 const axios = require("axios");
-require("dotenv").config();
+// require("dotenv").config();
 
 const bitQueryUrl = require("../config/key").bitQueryURL;
 const bitQueryApiKey = require("../config/key").bitQueryApiKey;
